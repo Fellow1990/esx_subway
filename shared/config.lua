@@ -80,5 +80,9 @@ Config.cars = {
 	{nom = "Adder", modele = "adder"},
 }
 
-Config.Color = 255, 0, 0
+Config.ColorCar = {
+	Red = 255,
+	Green = 0,
+	Blue = 0
+}
 Config.Plate = "Subway"
