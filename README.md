@@ -8,7 +8,7 @@ https://discord.gg/bJCsrG5h2G
 
 ## Requirements
 
-###### [ox_inventory](https://github.com/overextended/ox_lib)
+###### [ox_lib](https://github.com/overextended/ox_lib)
 ###### [ox_inventory](https://github.com/overextended/ox_inventory)
 ###### [Qtarget](https://github.com/overextended/qtarget)
 
