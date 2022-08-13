@@ -177,8 +177,8 @@ function createCar(car)
     local plaque = Config.Plate..math.random(1,9)
     SetVehicleNumberPlateText(vehicle, plaque) 
     SetPedIntoVehicle(PlayerPedId(),vehicle,-1)
-    SetVehicleCustomPrimaryColour(vehicle, Config.Color)
-    SetVehicleCustomSecondaryColour(vehicle, Config.Color)
+    SetVehicleCustomPrimaryColour(vehicle, Config.ColorCar.Red, Config.ColorCar.Green, Config.ColorCar.Blue)
+    SetVehicleCustomSecondaryColour(vehicle, Config.ColorCar.Red, Config.ColorCar.Green, Config.ColorCar.Blue)
 end
 
 RegisterNetEvent('esx_subway:spawnCar', function(data)
