@@ -24,13 +24,6 @@ Config.Zones = {
 		grade = {conveyor = true, employer = true, chef = true, coboss = true, boss = true},
 	},
 
-	Stock = {
-		Pos   = vector3(-1256.740234, -278.990112, 37.353382),
-		message = "Accéder au stock",
-		event = "esx_subway:openStock",
-		grade = {conveyor = true, employer = true, chef = true, coboss = true, boss = true},
-	},
-
 	Boss = {
 		Pos   = vector3(-1255.072876, -284.305756, 37.355324),
 		message = "Accéder à la gestion",
