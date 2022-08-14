@@ -15,22 +15,22 @@ https://discord.gg/bJCsrG5h2G
 ## **Add this to the file:** <sub>ox_inventory\data\items.lua</sub>
 ```
 {
-  coords = vec3(106.109673, -1981.432251, 20.962608),
+  coords = vec3(-1256.740234, -278.990112, 37.353382),
   target = {
-    loc = vec3(106.109673, -1981.432251, 20.962608),
+    loc = vec3(-1256.740234, -278.990112, 37.353382),
     length = 0.6,
     width = 1.8,
     heading = 340,
-    minZ = 19.96,
-    maxZ = 21.96,
+    minZ = 36.35,
+    maxZ = 38.35,
     label = 'Open personal locker'
   },
-  name = 'ballaslocker',
+  name = 'subwaylocker',
   label = 'Personal Locker',
   owner = false,
   slots = 70,
   weight = 70000,
-  groups = {['ballas'] = 0}
+  groups = {['subway'] = 0}
 },
 ```
 
