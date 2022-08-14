@@ -227,10 +227,6 @@ RegisterNetEvent('setjob', function(data)
 	TriggerServerEvent('setJob', data.value1, data.value2)
 end)
 
-RegisterNetEvent('esx_subway:openStock', function(data)
-    exports.ox_inventory:openInventory('stash', 'society_subway')
-end)
-
 RegisterNetEvent('esx_subway:takeCola', function(data)
 	TriggerServerEvent('esx_subway:takeCola')
 end)
