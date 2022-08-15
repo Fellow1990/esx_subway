@@ -12,7 +12,7 @@ https://discord.gg/bJCsrG5h2G
 ###### [ox_inventory](https://github.com/overextended/ox_inventory)
 ###### [Qtarget](https://github.com/overextended/qtarget)
 
-## **Add this to the file:** <sub>ox_inventory\data\items.lua</sub>
+## **Add this to the file:** <sub>ox_inventory\data\stashes.lua</sub>
 ```
 {
   coords = vec3(-1256.740234, -278.990112, 37.353382),
@@ -34,7 +34,7 @@ https://discord.gg/bJCsrG5h2G
 },
 ```
 
-## **Add this to the file:** <sub>ox_inventory\data\stashes.lua</sub>
+## **Add this to the file:** <sub>ox_inventory\data\item.lua</sub>
 ```
 ['cola'] = {
 		label = 'eCola',
