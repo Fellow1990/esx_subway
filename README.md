@@ -34,7 +34,7 @@ https://discord.gg/bJCsrG5h2G
 },
 ```
 
-## **Add this to the file:** <sub>ox_inventory\data\items.lua</sub>
+## **Add this to the file:** <sub>ox_inventory\data\stashes.lua</sub>
 ```
 ['cola'] = {
 		label = 'eCola',
