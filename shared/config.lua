@@ -1,6 +1,6 @@
 Config                      	= {}
 Config.DrawDistance             = 5.0
-Config.Distance               	= 1.5
+Config.Distance               	= 0.5
 Config.Locale               	= 'fr'
 
 Config.SubwayBlip = {
