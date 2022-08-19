@@ -1,6 +1,6 @@
 TriggerEvent('esx_society:registerSociety', 'subway', 'Subway', 'society_subway', 'society_subway', 'society_subway', {type = 'private'})
 
-ESX.RegisterServerCallback('getEmployee', function(source, cb, jobname)
+ESX.RegisterServerCallback('esx_subway:getEmployee', function(source, cb, jobname)
 	local data = {}
     local players = ESX.GetExtendedPlayers('job', jobname)
 	for i = 1, #players do
