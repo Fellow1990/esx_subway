@@ -49,7 +49,7 @@ end
 local listEmployee
 function getEmployee(jobname)
 	listEmployee = {}
-  ESX.TriggerServerCallback('getEmployee', function(data)
+  ESX.TriggerServerCallback('esx_subway:getEmployee', function(data)
     listEmployee = data
  end, jobname)
 end
