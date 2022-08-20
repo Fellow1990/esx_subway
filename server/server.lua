@@ -53,9 +53,6 @@ RegisterServerEvent('setJob')
 AddEventHandler('setJob', function(target, status)
   local xPlayer = ESX.GetPlayerFromId(source)
   local xTarget = ESX.GetPlayerFromId(target)
-  if (xTarget.job.grade+1) == xPlayer.job.grade then return end
-	if xPlayer.job.grade_name ~= 'boss' then return end
-	if (xTarget.job.grade-1) < 0 then return end
 	if status == 'fire' then
 		xTarget.setJob('unemployed', 0)
 		xPlayer.showNotification(_U('you_have_fired')..xTarget.getName())
