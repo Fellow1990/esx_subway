@@ -49,8 +49,8 @@ AddEventHandler('esx_subway:takeOrangejuice', function(item)
 	end
 end)
 
-RegisterServerEvent('setJob')
-AddEventHandler('setJob', function(target, status)
+RegisterServerEvent('esx_subway:setJob')
+AddEventHandler('esx_subway:setJob', function(target, status)
   local xPlayer = ESX.GetPlayerFromId(source)
   local xTarget = ESX.GetPlayerFromId(target)
 	if status == 'fire' then
