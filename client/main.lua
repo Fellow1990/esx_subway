@@ -78,22 +78,22 @@ RegisterNetEvent('esx_subway:playersOptions', function(data)
         options = {
 			[_U('promote')] = {
 				arrow = true,
-				event = 'setjob',
+				event = 'esx_subway:setjob',
 				args = {value1 = data, value2 = 'promote'}
 			},
 			[_U('demote')] = {
 				arrow = true,
-				event = 'setjob',
+				event = 'esx_subway:setjob',
 				args = {value1 = data, value2 = 'demote'}
 			},
 			[_U('fire')] = {
 				arrow = true,
-				event = 'setjob',
+				event = 'esx_subway:setjob',
 				args = {value1 = data, value2 = 'fire'}
 			},
 			[_U('recruit')] = {
 				arrow = true,
-				event = 'setjob',
+				event = 'esx_subway:setjob',
 				args = {value1 = data, value2 = 'recruit'}
 			}
 		}
@@ -223,8 +223,8 @@ AddEventHandler('esx_subway:withdraw', function()
 	TriggerServerEvent('esx_society:withdrawMoney', ESX.PlayerData.job.name, amount)
 end)
 
-RegisterNetEvent('setjob', function(data)
-	TriggerServerEvent('setJob', data.value1, data.value2)
+RegisterNetEvent('esx_subway:setjob', function(data)
+	TriggerServerEvent('esx_subway:setJob', data.value1, data.value2)
 end)
 
 RegisterNetEvent('esx_subway:takeCola', function(data)
