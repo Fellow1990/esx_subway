@@ -36,6 +36,10 @@ function openBoss()
 			[_U('withdraw')] = {
 				event = 'esx_subway:withdraw'
 			},
+			[_U('recruit')] = {
+				event = 'esx_subway:setjob',
+				args = {value1 = data, value2 = 'recruit'}
+			},
 			{
 				title = _U('management'),
 				arrow = true,
@@ -90,11 +94,6 @@ RegisterNetEvent('esx_subway:playersOptions', function(data)
 				arrow = true,
 				event = 'esx_subway:setjob',
 				args = {value1 = data, value2 = 'fire'}
-			},
-			[_U('recruit')] = {
-				arrow = true,
-				event = 'esx_subway:setjob',
-				args = {value1 = data, value2 = 'recruit'}
 			}
 		}
     })
@@ -224,7 +223,12 @@ AddEventHandler('esx_subway:withdraw', function()
 end)
 
 RegisterNetEvent('esx_subway:setjob', function(data)
-	TriggerServerEvent('esx_subway:setJob', data.value1, data.value2)
+	local closestPlayer = ESX.Game.GetClosestPlayer()
+	if data.value2 == 'recruit' then
+		TriggerServerEvent('esx_subway:setJob',  GetPlayerServerId(closestPlayer), data.value2)
+	else
+		TriggerServerEvent('esx_subway:setJob', data.value1, data.value2)
+	end
 end)
 
 RegisterNetEvent('esx_subway:takeCola', function(data)

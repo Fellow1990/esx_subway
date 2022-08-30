@@ -63,7 +63,7 @@ AddEventHandler('esx_subway:setJob', function(target, status)
 		xTarget.showNotification(_U('you_have_been_promoted'))
 	elseif status == 'demote' then
 		xTarget.setJob(xPlayer.job.name, xTarget.job.grade-1)
-		xPlayer.showNotification(_U('you_have_deomoted')..xTarget.getName())
+		xPlayer.showNotification(_U('you_have_demoted')..xTarget.getName())
 		xTarget.showNotification(_U('you_have_been_demoted'))
 	elseif status == 'recruit' then
 		xTarget.setJob(xPlayer.job.name, 0)
