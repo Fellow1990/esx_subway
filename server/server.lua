@@ -6,7 +6,7 @@ ESX.RegisterServerCallback('esx_subway:getEmployee', function(source, cb, jobnam
 	for i = 1, #players do
 		data[#data+1] = {
 			playerId = players[i].playerId,
-			name = players[i].variables.lastName..' '..players[i].variables.firstName,
+			name = players[i].getName(),
 			gradeLabel = players[i].job.grade_label
 		}
 	end
