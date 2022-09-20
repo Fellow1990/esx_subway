@@ -106,24 +106,25 @@ CreateThread(function()
 		local interval = true
 		local playerCoords = GetEntityCoords(PlayerPedId())
 		for k,v in pairs (Config.Zones) do
-			local options = {}
 			local distance = #(playerCoords - v.Pos)
 			if distance < Config.DrawDistance then interval = false
-				if ESX.PlayerData.job and ESX.PlayerData.job.name == 'subway' then
-					if distance < Config.Distance and v.grade[ESX.PlayerData.job.grade_name] then
-						options[k] = { event = v.event, label = v.message, job = ESX.PlayerData.job.name, icon = "fas fa-box-circle-check" }
-						exports.qtarget:AddBoxZone("zoneBS", v.Pos, 1, 1, {
-							name="zoneBS",
-							heading=300,
-							debugPoly=false,
-							minZ=27.0,
-							maxZ=47.0,
-							}, {
-								options = options,
-								distance = 3.5
+				if distance < Config.Distance then
+					local groups = {}
+					for k2,v2 in pairs (v.ox_grade) do
+						groups.subway = tonumber(k2)
+						exports.ox_target:addSphereZone({
+							coords = v.Pos,
+							radius = 1,
+							options = {
+								{
+									name = 'sphere',
+									event = v.event,
+									icon = v.icon,
+									label = v.message,
+									groups = groups
+								}
+							}
 						})
-					else
-						exports.qtarget:RemoveZone('zoneBS')
 					end
 				end
 			end
@@ -138,15 +139,28 @@ CreateThread(function()
 	while true do
 		Wait(0)
 		local interval = true
+		local playerCoords = GetEntityCoords(PlayerPedId())
 		for k,v in pairs (Config.Shops) do
-			local options = {}
-			if ESX.PlayerData.job and ESX.PlayerData.job.name == 'subway' then
-				if v.grade[ESX.PlayerData.job.grade_name] then
-					options[k] = { event = v.event, label = v.message, job = ESX.PlayerData.job.name, icon = "fas fa-box-circle-check" }
-					exports.qtarget:AddTargetModel(v.Model, {
-						options = options,
-						distance = 2
-					})
+			local distance = #(playerCoords - v.Pos)
+			if distance < Config.DrawDistance then interval = false
+				if distance < Config.Distance then
+					local groups = {}
+					for k2,v2 in pairs (v.ox_grade) do
+						groups.subway = tonumber(k2)
+						exports.ox_target:addSphereZone({
+							coords = v.Pos,
+							radius = 0.5,
+							options = {
+								{
+									name = 'sphere',
+									event = v.event,
+									icon = v.icon,
+									label = v.message,
+									groups = groups
+								}
+							}
+						})
+					end
 				end
 			end
 		end
