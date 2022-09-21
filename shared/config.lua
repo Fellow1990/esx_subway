@@ -22,7 +22,7 @@ Config.Zones = {
 		message = "Accéder au garage",
 		icon = "fa-sharp fa-solid fa-car",
 		event = "esx_subway:openGarage",
-		ox_grade = {['0'] = true, ['1'] = true, ['2'] = true, ['3'] = true, ['4'] = true},
+		grade = 0, -- Minimum access rank
 	},
 
 	Boss = {
@@ -30,7 +30,7 @@ Config.Zones = {
 		message = "Accéder à la gestion",
 		icon = "fa-solid fa-euro-sign",
 		event = "esx_subway:openBoss",
-		ox_grade = {['4'] = true},
+		grade = 3, -- Minimum access rank
 	},
 
 }
@@ -42,7 +42,7 @@ Config.Shops = {
 		message = "Faire un jus d'orange",
 		icon = "fa-sharp fa-solid fa-caret-up",
 		event = "esx_subway:takeOrangejuice",
-		ox_grade = {['0'] = true, ['1'] = true, ['2'] = true, ['3'] = true, ['4'] = true},
+		grade = 0, -- Minimum access rank
 	},
 
 	Coffee = {
@@ -50,7 +50,7 @@ Config.Shops = {
 		message = "Faire un café",
 		icon = "fa-sharp fa-solid fa-caret-up",
 		event = "esx_subway:takeCoffee",
-		ox_grade = {['0'] = true, ['1'] = true, ['2'] = true, ['3'] = true, ['4'] = true},
+		grade = 0, -- Minimum access rank
 	},
 
 	Milkshake = {
@@ -58,7 +58,7 @@ Config.Shops = {
 		message = "Prendre un milkshake",
 		icon = "fa-sharp fa-solid fa-caret-up",
 		event = "esx_subway:takeMilkshake",
-		ox_grade = {['0'] = true, ['1'] = true, ['2'] = true, ['3'] = true, ['4'] = true},
+		grade = 0, -- Minimum access rank
 	},
 
 	Fresh = {
@@ -67,7 +67,7 @@ Config.Shops = {
 		icon = "fa-sharp fa-solid fa-caret-up",
 		message = "Prende un cola",
 		event = "esx_subway:takeCola",
-		ox_grade = {['0'] = true, ['1'] = true, ['2'] = true, ['3'] = true, ['4'] = true},
+		grade = 0, -- Minimum access rank
 	},
 
 }

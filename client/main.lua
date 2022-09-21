@@ -109,23 +109,19 @@ CreateThread(function()
 			local distance = #(playerCoords - v.Pos)
 			if distance < Config.DrawDistance then interval = false
 				if distance < Config.Distance then
-					local groups = {}
-					for k2,v2 in pairs (v.ox_grade) do
-						groups.subway = tonumber(k2)
-						exports.ox_target:addSphereZone({
-							coords = v.Pos,
-							radius = 1,
-							options = {
-								{
-									name = 'sphere',
-									event = v.event,
-									icon = v.icon,
-									label = v.message,
-									groups = groups
-								}
+					exports.ox_target:addSphereZone({
+						coords = v.Pos,
+						radius = 1,
+						options = {
+							{
+								name = 'sphere',
+								event = v.event,
+								icon = v.icon,
+								label = v.message,
+								groups = {subway=v.grade}
 							}
-						})
-					end
+						}
+					})
 				end
 			end
 		end
@@ -144,23 +140,19 @@ CreateThread(function()
 			local distance = #(playerCoords - v.Pos)
 			if distance < Config.DrawDistance then interval = false
 				if distance < Config.Distance then
-					local groups = {}
-					for k2,v2 in pairs (v.ox_grade) do
-						groups.subway = tonumber(k2)
-						exports.ox_target:addSphereZone({
-							coords = v.Pos,
-							radius = 0.5,
-							options = {
-								{
-									name = 'sphere',
-									event = v.event,
-									icon = v.icon,
-									label = v.message,
-									groups = groups
-								}
+					exports.ox_target:addSphereZone({
+						coords = v.Pos,
+						radius = 0.5,
+						options = {
+							{
+								name = 'sphere',
+								event = v.event,
+								icon = v.icon,
+								label = v.message,
+								groups = {subway=v.grade}
 							}
-						})
-					end
+						}
+					})
 				end
 			end
 		end
