@@ -10,7 +10,7 @@ https://discord.gg/bJCsrG5h2G
 
 ###### [ox_lib](https://github.com/overextended/ox_lib)
 ###### [ox_inventory](https://github.com/overextended/ox_inventory)
-###### [Qtarget](https://github.com/overextended/qtarget)
+###### [ox_target](https://github.com/overextended/ox_target)
 
 ## **Add this to the file:** <sub>ox_inventory\data\stashes.lua</sub>
 ```
