@@ -35,43 +35,6 @@ Config.Zones = {
 
 }
 
-Config.Shops = {
-
-	Juice = {
-		Pos = vector3(-1254.135864, -288.600189, 37.354916),
-		message = "Faire un jus d'orange",
-		icon = "fa-sharp fa-solid fa-caret-up",
-		event = "esx_subway:takeOrangejuice",
-		grade = 0, -- Minimum access rank
-	},
-
-	Coffee = {
-		Pos = vector3(-1254.851074, -287.108704, 37.355412),
-		message = "Faire un café",
-		icon = "fa-sharp fa-solid fa-caret-up",
-		event = "esx_subway:takeCoffee",
-		grade = 0, -- Minimum access rank
-	},
-
-	Milkshake = {
-		Pos = vector3(-1255.614014, -285.651947, 37.355873),
-		message = "Prendre un milkshake",
-		icon = "fa-sharp fa-solid fa-caret-up",
-		event = "esx_subway:takeMilkshake",
-		grade = 0, -- Minimum access rank
-	},
-
-	Fresh = {
-		Pos = vector3(-1256.242188, -284.134125, 37.356308),
-		item	= 'cola',
-		icon = "fa-sharp fa-solid fa-caret-up",
-		message = "Prende un cola",
-		event = "esx_subway:takeCola",
-		grade = 0, -- Minimum access rank
-	},
-
-}
-
 Config.cars = {
 	{nom = "Ranger véhicule", modele = ""},
     {nom = "Blista", modele = "blista"},
