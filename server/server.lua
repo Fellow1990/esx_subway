@@ -13,42 +13,6 @@ ESX.RegisterServerCallback('esx_subway:getEmployee', function(source, cb, jobnam
     cb(data)
 end)
 
-RegisterServerEvent('esx_subway:takeCola')
-AddEventHandler('esx_subway:takeCola', function(item)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.canCarryItem('cola', 1) then
-		xPlayer.addInventoryItem('cola', 1)
-	end
-end)
-
-RegisterServerEvent('esx_subway:takeMilkshake')
-AddEventHandler('esx_subway:takeMilkshake', function(item)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.canCarryItem('milkshake', 1) then
-		xPlayer.addInventoryItem('milkshake', 1)
-	end
-end)
-
-RegisterServerEvent('esx_subway:takeCoffee')
-AddEventHandler('esx_subway:takeCoffee', function(item)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.canCarryItem('coffee', 1) then
-		xPlayer.addInventoryItem('coffee', 1)
-	end
-end)
-
-RegisterServerEvent('esx_subway:takeOrangejuice')
-AddEventHandler('esx_subway:takeOrangejuice', function(item)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-	if xPlayer.canCarryItem('orangejuice', 1) then
-		xPlayer.addInventoryItem('orangejuice', 1)
-	end
-end)
-
 RegisterServerEvent('esx_subway:setJob')
 AddEventHandler('esx_subway:setJob', function(target, status)
   local xPlayer = ESX.GetPlayerFromId(source)
