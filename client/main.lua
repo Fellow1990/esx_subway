@@ -100,15 +100,8 @@ RegisterNetEvent('esx_subway:playersOptions', function(data)
     lib.showContext('playersOptions')
 end)
 
-CreateThread(function()
-	while true do
-		Wait(0)
-		local interval = true
-		local playerCoords = GetEntityCoords(PlayerPedId())
+
 		for k,v in pairs (Config.Zones) do
-			local distance = #(playerCoords - v.Pos)
-			if distance < Config.DrawDistance then interval = false
-				if distance < Config.Distance then
 					exports.ox_target:addSphereZone({
 						coords = v.Pos,
 						radius = 1,
@@ -125,42 +118,6 @@ CreateThread(function()
 				end
 			end
 		end
-		if interval then
-			Wait(500)
-		end
-	end
-end)
-
-CreateThread(function()
-	while true do
-		Wait(0)
-		local interval = true
-		local playerCoords = GetEntityCoords(PlayerPedId())
-		for k,v in pairs (Config.Shops) do
-			local distance = #(playerCoords - v.Pos)
-			if distance < Config.DrawDistance then interval = false
-				if distance < Config.Distance then
-					exports.ox_target:addSphereZone({
-						coords = v.Pos,
-						radius = 0.5,
-						options = {
-							{
-								name = 'sphere',
-								event = v.event,
-								icon = v.icon,
-								label = v.message,
-								groups = {subway=v.grade}
-							}
-						}
-					})
-				end
-			end
-		end
-		if interval then
-			Wait(500)
-		end
-	end
-end)
 
 RegisterNetEvent('esx_subway:openGarage')
 AddEventHandler('esx_subway:openGarage',function()
@@ -235,22 +192,6 @@ RegisterNetEvent('esx_subway:setjob', function(data)
 	else
 		TriggerServerEvent('esx_subway:setJob', data.value1, data.value2)
 	end
-end)
-
-RegisterNetEvent('esx_subway:takeCola', function(data)
-	TriggerServerEvent('esx_subway:takeCola')
-end)
-
-RegisterNetEvent('esx_subway:takeMilkshake', function(data)
-	TriggerServerEvent('esx_subway:takeMilkshake')
-end)
-
-RegisterNetEvent('esx_subway:takeCoffee', function(data)
-	TriggerServerEvent('esx_subway:takeCoffee')
-end)
-
-RegisterNetEvent('esx_subway:takeOrangejuice', function(data)
-	TriggerServerEvent('esx_subway:takeOrangejuice')
 end)
 
 CreateThread(function()
