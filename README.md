@@ -1,8 +1,8 @@
 # esx_subway
 
-Fellow | Communauté ✨
+🌍 FiveM | Francophone
 
-https://discord.gg/b67Yhf3j8h
+https://discord.gg/wewesnerQd
 
 ✅ Vídeo: https://www.youtube.com/watch?v=TlWbAK1l6LY
 
